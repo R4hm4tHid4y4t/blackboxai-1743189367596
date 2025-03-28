@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penerbit Buku</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <div id="navigation"></div>
+
+    <!-- Hero Section -->
+    <div id="hero"></div>
+
+    <!-- Books Section -->
+    <div id="books"></div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <script>
+        // Load navigation component
+        fetch('navigation.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('navigation').innerHTML = data)
+            .catch(err => console.error('Error loading navigation:', err));
+
+        // Load hero component
+        fetch('hero.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('hero').innerHTML = data)
+            .catch(err => console.error('Error loading hero:', err));
+
+        // Load books component
+        fetch('books.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('books').innerHTML = data)
+            .catch(err => console.error('Error loading books:', err));
+
+        // Load footer component
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data)
+            .catch(err => console.error('Error loading footer:', err));
+    </script>
+</body>
+</html>
